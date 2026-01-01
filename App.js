@@ -17,9 +17,35 @@ Application Design
 * - Contact
 */
 
-const jsxheading = <h1 id = "heading">Hello World from JSX</h1>;
+
+const Header = () =>{
+return (
+   <div className="header">
+      <div className="logo-container">
+         <img className="logo" src ="null"/>
+      </div>
+      <div className="nav-items">
+         <ul>
+            <li>Home</li>
+            <li>About Us</li>
+            <li>Conatct Us</li>
+            <li>Cart</li>
+         </ul>
+      </div>
+   </div>
+)
+
+};
+
+const AppLayout = () => {
+   return(
+      <div className="app">
+         <Header/>
+      </div>
+   )
+};
+
 const root = ReactDOM.createRoot(document.getElementById("root"));
-   
-   root.render(jsxheading);
+root.render(<AppLayout/>);
 
    
